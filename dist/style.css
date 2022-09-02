@@ -13,6 +13,7 @@ html {
 }
 
 .container {
+  position: relative;
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
@@ -35,7 +36,7 @@ html {
   padding: 33px 0;
   margin: 0 0 35px; }
 
-.roulette-item-wrapper {
+.roulette-item-wrapper{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,14 +56,20 @@ html {
   overflow: hidden; 
   position: -550px;}
 
-.roulette-item {
+.roulette-item-1{
   width: 138px;
   height: 173px;
   margin-right: 2px;
   text-align: center;
   position: relative;
   transition: transform 6s cubic-bezier(.1,.75,.18,1); }
-
+.roulette-item-2{
+    width: 138px;
+    height: 173px;
+    margin-right: 2px;
+    text-align: center;
+    position: relative;
+    transition: transform 6s cubic-bezier(.1,.75,.18,1); }
 .img-wrapper {
   position: absolute;
   z-index: 1;
@@ -74,16 +81,16 @@ html {
   transition: all .3;
   margin: 0 0 17px 0;
   overflow: hidden; }
-  .img-wrapper:hover img {
-    cursor: pointer;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    overflow: hidden; }
-  .img-wrapper img {
-    width: 114px;
-    height: auto;
-   }
+.img-wrapper:hover img {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  overflow: hidden; }
+.img-wrapper img {
+  width: 114px;
+  height: auto;
+}
 
 .roulette-subtitle-first {
   font-size: 11px;
@@ -134,7 +141,6 @@ html {
 
 .btn {
   align-items: center;
-  background: url(../img/linkback.png) no-repeat center/cover;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -250,10 +256,11 @@ html {
     right: 13px !important;
 }
 
-.roulette-item-wrapper {
+.roulette-item-wrapper{
   position: relative;
 }
-.stopper {
+ 
+.stopper{
     content: '';
     margin-left: -24px;
     position: absolute;
@@ -263,12 +270,23 @@ html {
     left: 50%;
     z-index: 16;
     background-image: url(https://teamviper.site/wp-content/uploads/2022/08/espadaGeralt.png);
-}
+} 
+.stopper2{
+  content: '';
+  margin-left: -24px;
+  position: absolute;
+  height: 264px;
+  width: 59px;
+  top: 15%;
+  left: 50%;
+  z-index: 16;
+  background-image: url(https://teamviper.site/wp-content/uploads/2022/08/espadaGeralt.png);
+} 
 .roulette-item-wrapper::before {
     content: '';
     position: absolute;
     height: 100%;
-    width: 2px;
+    width: 5px;
     top: 0;
     left: 50%;
     z-index: 15;
