@@ -271,17 +271,7 @@ html {
     z-index: 16;
     background-image: url(https://teamviper.site/wp-content/uploads/2022/08/espadaGeralt.png);
 } 
-.stopper2{
-  content: '';
-  margin-left: -24px;
-  position: absolute;
-  height: 264px;
-  width: 59px;
-  top: 15%;
-  left: 50%;
-  z-index: 16;
-  background-image: url(https://teamviper.site/wp-content/uploads/2022/08/espadaGeralt.png);
-} 
+
 .roulette-item-wrapper::before {
     content: '';
     position: absolute;
