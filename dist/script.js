@@ -19,7 +19,7 @@ $(document).ready(function() {
 	//initWheel(decks);
 });
 async function getDecks(){
-  const requestURL = 'https://api-decks-86377-default-rtdb.firebaseio.com/decks.json';
+  const requestURL = 'https://api-decks-86377-default-rtdb.firebaseio.com/champions.json';
   const respuesta = await fetch(requestURL).catch(() => ["Loading..."]);
   if (!respuesta.ok){
     oop = "Not encontrado";
@@ -32,23 +32,24 @@ async function getDecks(){
 }
 
 function initWheel(list){
+  list = list.sort(function() {return Math.random() - 0.5}); //random list decks
 	var $wheel = $('#tier-1'),
   		tier1 = "";
   for (item of list){
     tier1+= '<div class="roulette-item-1">';
     tier1+= '<div class="img-back-card"><div class="opacity-'+item.faction+'"> </div></div>';
-    tier1+= '<div class="img-wrapper-t"><a href="'+item.link+'" target="_blank"><img src="https://casinogwent.com/wp-content/uploads/2022/08/'+item.faction+'-'+item.leader.toLowerCase().replace(/\s/g, '-')+'-min.png" alt="GameItem"></a></div>';
-    tier1+= '<h3 class="roulette-subtitle-first">'+item.faction+' '+item.name+'</h3>';
-    tier1+= '<h3 class="roulette-subtitle-second">'+item.tier+'</h3></div>';
+    tier1+= '<div class="img-wrapper-t"><a href="#" target="_blank"><img src="https://teamviper.site/wp-content/uploads/2022/11/'+item.region1+'.png" alt="GameItem"></a></div>';
+    tier1+= '<h3 class="roulette-subtitle-first">'+item.name+'</h3></div>';
+    //tier1+= '<h3 class="roulette-subtitle-second">'+item.tier+'</h3></div>';
   }
-	for(var x = 0; x < 20; x++){ //inserta 10 veces la lista
+	for(var x = 0; x < 6; x++){ //inserta 10 veces la lista
   	$wheel.append(tier1);
   }
 } 
 
 function slideImages1() {
     var parent = $("#tier-1");
-    randomValue = randomNum(50,75);     
+    randomValue = randomNum(75,95);     
     spunAmount = parent.children()[randomValue].getBoundingClientRect().x;
     spunAmount = Math.abs(spunAmount);
     //spunAmount += 4800;

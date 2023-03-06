@@ -131,13 +131,15 @@ End of comment */
   z-index: 1;
   width: 100%;
   bottom: 85px;
+  color: seashell;
   /*margin: 0 0 11px 0; */}
 
 .roulette-subtitle-second {
   font-size: 11px;
   position: relative;
   bottom: 100px;
-  z-index: 1; }
+  z-index: 1;
+  color: seashell; }
 .before-spin {
     display: flex;
     align-items: center;
